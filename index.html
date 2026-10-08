@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avatar Live</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="gl" aria-label="3D Immersive Presentation. Drag to look around."></canvas>
+
+<div class="top">
+  <div class="modes" role="group" aria-label="Mode">
+    <button type="button" data-mode="present" aria-pressed="false">Present</button>
+    <button type="button" data-mode="sit" aria-pressed="false">Sit and talk</button>
+    <button type="button" data-mode="celebrate" aria-pressed="false">Celebrate</button>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="dock">
+    <fieldset class="avatars" id="avatars"><legend>Avatar</legend></fieldset>
+    <div class="tools">
+      <button type="button" class="tool primary" id="live" aria-pressed="false">Go live</button>
+      <button type="button" class="tool" id="replay">Replay demo</button>
+      <button type="button" class="tool" id="sound" aria-pressed="true">Sound on</button>
+    </div>
+  </div>
+</div>
+
+<script src="setup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>window.THREE || document.write('<script src="vendor/three.min.js"><\/script>');</script>
+<script src="demo_scene.js"></script>
+</body>
+</html>
